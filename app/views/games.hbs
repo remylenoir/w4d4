@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Games</title>
+</head>
+
+<body>
+
+  <!-- Iterating through an Array -->
+  <ul>Videogames
+    {{#each gamesList}}
+
+    {{#if @first}}
+    <li>{{@index}}: {{this}}</li>
+    {{else if @last}}
+    <li>{{@index}}: {{this}}</li>
+    {{else}}
+    <li>{{this}}</li>
+    {{/if}}
+
+    {{/each}}
+  </ul>
+
+  <!-- Iterating through an Object -->
+  <ul>Consoles
+    {{#each consolesObj}}
+    <li>{{@key}} {{this}}</li>
+    {{/each}}
+  </ul>
+
+  <!-- Print the a specific value of an Object -->
+  {{#with country}}
+  {{JP}}
+  {{/with}}
+
+</body>
+
+</html>
